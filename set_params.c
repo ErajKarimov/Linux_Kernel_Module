@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
   // Составление команды для запуска модуля с передачей параметров
   char command[256];
   snprintf(command, sizeof(command),
-           "sudo insmod infotecs_module.ko output_filename=\"%s\" timer_period=%s",
+           "sudo insmod kernel_module.ko output_filename=\"%s\" timer_period=%s",
            argv[1], argv[2]);
 
   // Выполнение команды с помощью системного вызова system

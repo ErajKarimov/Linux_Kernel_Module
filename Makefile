@@ -1,4 +1,4 @@
-obj-m += infotecs_module.o
+obj-m += kernel_module.o
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
@@ -8,7 +8,7 @@ clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 	rm -f set_params
 load:
-	sudo insmod infotecs_module.ko
+	sudo insmod kernel_module.ko
 
 unload:
-	sudo rmmod infotecs_module
+	sudo rmmod kernel_module
